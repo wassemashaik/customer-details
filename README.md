@@ -84,11 +84,11 @@ Runs the frontend at http://localhost:3000.
 ---
 
 **📸 ScreenShot**
-![Home Page Desktop view](/client/public/home_page_desktop.png)
-![Home Page Mobile](/client/public/home_page_mobile.png)
-![NavBar mobile](/client/public/modal_mobile.png)
-![Address Hiding Option](/client/public/Address_hiding_option.png)
-![Customer details Page with Address List with Update and Delete Option](/client/public/customer_details_page.png)
+![Home Page Desktop view](/public/home_page_desktop.png)
+![Home Page Mobile](/public/home_page_mobile.png)
+![NavBar mobile](/public/modal_mobile.png)
+![Address Hiding Option](/public/Address_hiding_option.png)
+![Customer details Page with Address List with Update and Delete Option](/public/customer_details_page.png)
 
 ## 🌱 Possible Future Enhancements ##
 - Authentication & Roles
