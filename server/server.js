@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const db = require("./db/db");
-const port = 5000;
+const port = process.env.PORT || 5000;
 const app = express();
 const { checkCustomerExists } = require("./db/helpers");
 const catchAsync = require("./utils/catchAsync");
@@ -448,7 +448,7 @@ app.delete(
 );
 
 app.listen(port, () => {
-  console.log("Server running at port: 5000");
+  console.log(`Server running at port: ${PORT}`);
 });
 
 app.use((err, req, res, next) => {
