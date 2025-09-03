@@ -15,7 +15,7 @@ const CustomerDetailPage = () => {
     const fetchCustomer = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/customers/${id}`
+          `${process.env.REACT_APP_API_URL}/api/customers/${id}`
         );
         if (!response.ok) throw new Error("Failed to fetch customer details");
         const data = await response.json();
@@ -33,7 +33,7 @@ const CustomerDetailPage = () => {
   const handleAddAddress = async (formData) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/customers/${id}/addresses`,
+        `${process.env.REACT_APP_API_URL}/api/customers/${id}/addresses`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -56,7 +56,7 @@ const CustomerDetailPage = () => {
   const handleUpdateAddress = async (customerId, addressId, formData) => {
     try {
       const res = await fetch(
-        `http://localhost:5000/api/customers/${customerId}/addresses/${addressId}`,
+        `${process.env.REACT_APP_API_URL}/api/customers/${customerId}/addresses/${addressId}`,
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
@@ -83,7 +83,7 @@ const CustomerDetailPage = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/addresses/${addressId}`,
+        `${process.env.REACT_APP_API_URL}/api/addresses/${addressId}`,
         { method: "DELETE" }
       );
       if (!response.ok) throw new Error("Failed to delete address");
@@ -102,7 +102,7 @@ const CustomerDetailPage = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/customers/${id}`,
+        `${process.env.REACT_APP_API_URL}/api/customers/${id}`,
         { method: "DELETE" }
       );
       if (!response.ok) throw new Error("Failed to delete customer");
