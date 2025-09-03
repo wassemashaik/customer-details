@@ -30,7 +30,7 @@ const CustomerList = () => {
       queryParams.append("limit", limit);
 
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}?${queryParams.toString()}`
+        `${process.env.REACT_APP_API_URL}/api/customers?${queryParams.toString()}`
       );
       console.log(response);
       if (!response.ok) throw new Error("Failed to fetch customers");
