@@ -9,7 +9,7 @@ const EditCustomerPage = () => {
 
   useEffect(() => {
     const fetchCustomer = async () => {
-      const response = await fetch(`http://localhost:5000/api/customers/${id}`);
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/customers/${id}`);
       if (response.ok) {
         const data = await response.json();
         setCustomer(data.data);
@@ -22,7 +22,7 @@ const EditCustomerPage = () => {
 
   const handleEdit = async (formData) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/customers/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/customers/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
