@@ -6,7 +6,7 @@ const port = 5000;
 const app = express();
 const { checkCustomerExists } = require("./db/helpers");
 const catchAsync = require("./utils/catchAsync");
-const AppError = require("./utils/AppError");
+const AppError = require("./utils/appError");
 const { count } = require("console");
 
 app.use(cors());
